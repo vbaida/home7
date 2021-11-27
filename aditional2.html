@@ -22,14 +22,14 @@
             this.website = website;
         }
     }
-
     let userarr = [
-        new User (1,'Leanne Graham','Bret','Sincere@april.biz')
+        new User (1,'Leanne Graham','Bret','Sincere@april.biz','1-770-736-8031 x56442', 'hildegard.org')
     ]
 
+
     class Adres extends User {
-        constructor(id, username, sername, email, street, suite, city, zipcode) {
-            super(id, username, sername, email);
+        constructor(id, username, sername, email, phone,website, street, suite, city, zipcode) {
+            super(id, username, sername, email, phone,website);
             this.street = street;
             this.suite = suite;
             this.city = city;
@@ -41,8 +41,8 @@
     ]
 
     class Geo extends Adres {
-        constructor(id, username, sername, email, street, suite, city, zipcode, lat, lng) {
-            super(id, username, sername, email, street, suite, city, zipcode);
+        constructor(id, username, sername, email, phone, website, street, suite, city, zipcode, lat, lng) {
+            super(id, username, sername, email, phone, website, street, suite, city, zipcode);
             this.lat = lat;
             this.lng = lng;
         }
@@ -61,7 +61,9 @@
     let companyarr = [
         new Company('Romaguera-Crona', 'Multi-layered client-server neural-net', 'harness real-time e-markets')
     ]
-  console.log(userarr, Adresarr, geoarr, companyarr)
+
+
+
 </script>
 </body>
 </html>
