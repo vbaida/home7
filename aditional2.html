@@ -18,12 +18,14 @@
             this.username = username;
             this.sername = sername;
             this.email = email;
+            this.phone = phone;
+            this.website = website;
         }
     }
 
     let userarr = [
-      new User (1,'Leanne Graham','Bret','Sincere@april.biz')
-   ]
+        new User (1,'Leanne Graham','Bret','Sincere@april.biz')
+    ]
 
     class Adres extends User {
         constructor(id, username, sername, email, street, suite, city, zipcode) {
@@ -34,27 +36,32 @@
             this.zipcode = zipcode;
         }
     }
-let Adresarr = [
-    new Adres ('Kulas Light', 'Apt. 556', 'Gwenborough', '92998-3874')
-        ]
+    let Adresarr = [
+        new Adres ('Kulas Light', 'Apt. 556', 'Gwenborough', '92998-3874')
+    ]
 
-        class Geo extends Adres {
-                constructor(id, username, sername, email, street, suite, city, zipcode, lat, lng) {
-                super(id, username, sername, email, street, suite, city, zipcode);
-                this.lat = lat;
-                this.lng = lng;
-            }
+    class Geo extends Adres {
+        constructor(id, username, sername, email, street, suite, city, zipcode, lat, lng) {
+            super(id, username, sername, email, street, suite, city, zipcode);
+            this.lat = lat;
+            this.lng = lng;
         }
-let geoarr = [
-    new Geo('-37.3159', '81.1496')
-]
-   class User {
-           constructor(phone, website) {
-           this.phone = phone;
-           this.website = website;
-       }
-   }
-
+    }
+    let geoarr = [
+        new Geo('-37.3159', '81.1496')
+    ]
+    class Company extends User {
+           constructor(id, username, sername, email, phone, website, name, catchPhrase, bs) {
+            super(id, username, sername, email, phone, website);
+            this.name = name;
+            this.catchPhrase = catchPhrase;
+            this.bs = bs;
+        }
+    }
+    let companyarr = [
+        new Company('Romaguera-Crona', 'Multi-layered client-server neural-net', 'harness real-time e-markets')
+    ]
+  console.log(userarr, Adresarr, geoarr, companyarr)
 </script>
 </body>
 </html>
